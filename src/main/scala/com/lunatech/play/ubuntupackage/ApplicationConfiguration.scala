@@ -5,4 +5,5 @@ case class ApplicationConfiguration(
   user: String,
   group: String,
   dir: String,
-  port: Int)
+  port: Int,
+  configUrl:String)
