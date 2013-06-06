@@ -8,7 +8,7 @@ Installation
 
 In your `project/plugins.sbt` file, add the following:
 
-    resolvers += "Rhinofly Internal Release Repository" at "http://maven-repository.rhinofly.net:8081/artifactory/libs-release-local"
+    resolvers += Resolver.url("Rhinofly Internal Release Repository", new URL("http://maven-repository.rhinofly.net:8081/artifactory/libs-release-local"))(Resolver.ivyStylePatterns)
 
     resolvers += Resolver.url("scalasbt", new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases"))(Resolver.ivyStylePatterns)
 
