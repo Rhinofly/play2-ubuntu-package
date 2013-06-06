@@ -19,6 +19,7 @@ Versions
 
 * 0.3 is for Play 2.0.4
 * 0.4 is for Play 2.1-RC3
+* 0.5 is for Play 2.1.1
 
 Usage
 -----
@@ -31,11 +32,15 @@ Then, add the `ubuntuPackageSettings` to your project:
 
     settings(ubuntuPackageSettings:_*).settings( // your other settings
 
-Now, there are various TaskKeys you can set from `UbuntuPackageKeys`. Only one is required, `maintainer`:
+Now, there are various TaskKeys you can set from `UbuntuPackageKeys`. Only one is required, `configUrl`:
 
-    UbuntuPackageKeys.maintainer := "Erik Bakker <erik@lunatech.com>"
+    UbuntuPackageKeys.configUrl := "http://domain/configFile"
+
+You can then include the `application.conf` using this syntax: `include classpath("application.conf")`
 
 To build the package use the `deb` task.
+
+You can also execute the `deb` task like this: `sbt 'set UbuntuPackageKeys.configUrl := "http://domain/config"' 'set UbuntuPackageKeys.port := 9001' deb`
 
 Developing
 ----------
