@@ -8,11 +8,11 @@ Installation
 
 In your `project/plugins.sbt` file, add the following:
 
-    resolvers += Resolver.url("Lunatech SBT Plugins", new URL("http://artifactory.lunatech.com/artifactory/sbt-plugins-public"))(Resolver.ivyStylePatterns)
+    resolvers += "Rhinofly Internal Release Repository" at "http://maven-repository.rhinofly.net:8081/artifactory/libs-release-local"
 
     resolvers += Resolver.url("scalasbt", new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases"))(Resolver.ivyStylePatterns)
 
-    addSbtPlugin("com.lunatech" % "play2-ubuntu-package" % "0.3")
+    addSbtPlugin("com.lunatech" % "play2-ubuntu-package" % "0.5")
 
 Versions
 --------
