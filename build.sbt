@@ -20,4 +20,7 @@ publishMavenStyle := false
 
 publishArtifact in Test := false
 
-publishTo := Some(Resolver.url("sbt-plugins-public", new URL("http://artifactory.lunatech.com/artifactory/sbt-plugins-public/"))(Resolver.ivyStylePatterns))
+publishTo := Some("Rhinofly Internal release Repository" at "http://maven-repository.rhinofly.net:8081/artifactory/libs-release-local")
+//Some(Resolver.url("sbt-plugins-public", new URL("http://artifactory.lunatech.com/artifactory/sbt-plugins-public/"))(Resolver.ivyStylePatterns))
+
+credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
