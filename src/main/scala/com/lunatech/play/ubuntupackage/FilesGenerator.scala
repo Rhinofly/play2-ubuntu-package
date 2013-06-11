@@ -15,7 +15,7 @@ object FilesGenerator {
        |console log
        |setuid %s
        |setgid %s
-       |env PLAY_OPTS="-Dhttp.port=%s -Dconfig.url=\"%s\""
+       |env PLAY_OPTS="-Dhttp.port=%s -Dconfig.url=%s"
        |pre-start exec rm -f %s
        |exec %s $PLAY_OPTS""".stripMargin.format(config.user, config.group, config.port, config.configUrl, config.dir + "/RUNNING_PID", config.dir + "/start")
 

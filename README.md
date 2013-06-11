@@ -12,7 +12,7 @@ In your `project/plugins.sbt` file, add the following:
 
     resolvers += Resolver.url("scalasbt", new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases"))(Resolver.ivyStylePatterns)
 
-    addSbtPlugin("com.lunatech" % "play2-ubuntu-package" % "0.5")
+    addSbtPlugin("com.lunatech" % "play2-ubuntu-package" % "0.5.1")
 
 Versions
 --------
