@@ -12,7 +12,7 @@ name := "play2-ubuntu-package"
 
 organization := "com.lunatech"
 
-version := "0.5.1"
+version := "0.5.2"
 
 description := "Play 2 plugin for building Ubuntu packages"
 
@@ -24,3 +24,5 @@ publishTo := Some(Resolver.url("Rhinofly Internal release Repository", new URL("
 //Some(Resolver.url("sbt-plugins-public", new URL("http://artifactory.lunatech.com/artifactory/sbt-plugins-public/"))(Resolver.ivyStylePatterns))
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+
+scalaVersion := "2.9.2"

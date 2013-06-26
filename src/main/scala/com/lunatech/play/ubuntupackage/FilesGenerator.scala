@@ -24,7 +24,8 @@ object FilesGenerator {
        |# preinst script for %1$s
        |set -e
        |id %s 2> /dev/null || addgroup --system %s
-       |id %s 2> /dev/null || adduser --system --no-create-home --disabled-password --shell /bin/false %s""".stripMargin.format(config.group, config.user))
+       |id %s 2> /dev/null || adduser --system --no-create-home --disabled-password --shell /bin/false %s""".stripMargin
+       .format(config.group, config.group, config.user, config.user))
 
   /*
    * Setting ownership on a directory doesn't work with Native Packager Plugin 0.4.4, so we do it 
@@ -41,7 +42,7 @@ object FilesGenerator {
 
   def preRemoval(config: ApplicationConfiguration) = Some(
     """|#!/bin/sh
-       |service %s stop || true""".stripMargin.format(config.name))
+       |service %s stop 2> /dev/null || true""".stripMargin.format(config.name))
 
   /*
    *  We don't know whether you created a user for this service, or used an existing
